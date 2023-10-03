@@ -1,0 +1,184 @@
+.App {
+  text-align: center;
+}
+
+.nav{
+
+  display: flex;
+  justify-content: center;
+  & li{
+    text-decoration: none;
+    list-style-type:none;
+    padding: 10px;
+    & :hover{
+      color: #e30000;
+    }
+    & a{
+      text-decoration: none;
+      color: darkslategray;
+
+    }
+  }
+}
+.footer{
+  color: #c4c4c4;
+  display: block;
+  position: sticky;
+  bottom: 0;
+  background-color: darkslategray;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.register{
+  background-color: #008f82;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & form{
+margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-width:300px;
+    max-width:400px;
+    padding: 40px;
+    & input{
+      margin: 10px;
+      height: 30px;
+      text-align: center;
+      border-radius: 5px;
+      border: none;
+    }
+    & .registerBtn{
+            margin: 10px;
+            height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            border: none;
+      & :hover{
+              color: #ff0000;
+              cursor: pointer;
+            }
+                }
+  }
+}
+
+
+
+.addProduct{
+    position: absolute;
+    left: 50%;
+    margin-left: -25%;
+    border-radius: 20px;
+
+   width:50%;
+    height: 400px;
+    animation: blowUp 1s  ease-in-out ;
+    background-color: rgba(125, 161, 161, 0.93);
+    box-shadow: 2px 2px 20px black;
+    & .addProductForm{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        & form{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding:30px;
+            & input{
+                text-align: center;
+                width: 70%;
+                border: none;
+                border-radius: 7px;
+                margin-bottom: 5px;
+                height: 30px;
+            }
+
+
+        }
+    }
+}
+.productsPage{
+    .productsDiv{
+.productTable{
+    height: 20vh;
+    overflow: scroll;
+    width: 70%;
+    margin: auto;
+    border-radius: 20px;
+    & th{
+        border-radius: 4px;
+        color: #008f82;
+        border: 1px solid rgba(47, 79, 79, 0.5);
+    }
+
+        /*background-color: rgba(181, 255, 243, 0.34);*/
+
+
+        .items{
+
+
+            color: #525252;
+            background-color: rgba(233, 255, 245, 0.7);
+            border: 5px solid black;
+            /*border-bottom: 5px solid black;*/
+        }
+        .blowUp{
+            color: #262626;
+            background-color: rgba(181, 255, 223, 0.7);
+            border: 5px solid black;
+            height: 300px ;
+        }
+
+
+
+
+
+
+    }
+}
+
+}
+
+@keyframes blowUp {
+
+    0%{  scale: 5% }
+   30%{  transform: translate(-50% );  }
+   65%{  scale:90% ;}
+   100%{ scale:100%;transform: translate(0% );  }
+
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
